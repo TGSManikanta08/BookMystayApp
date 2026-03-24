@@ -1,9 +1,17 @@
-public class BookMyStay {
-    public static void main(String[] args) {
+abstract class Room {
+    protected String roomType;
+    protected int beds;
+    protected double price;
 
-        //USE CASE 1
-        System.out.println("Welcome to the Hotel Booking Management System");
-        System.out.println("System initialized successfully.");
-        System.out.println("Application: Book My Stay App v1.0");
+    public Room(String roomType, int beds, double price) {
+        this.roomType = roomType;
+        this.beds = beds;
+        this.price = price;
     }
-}
+
+    public void displayDetails() {
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Beds: " + beds);
+        System.out.println("Price: $" + price);
+    }
+}git
